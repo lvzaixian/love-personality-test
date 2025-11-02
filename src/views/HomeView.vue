@@ -93,8 +93,8 @@ function startQuiz() {
 
 .badge {
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,8 +114,8 @@ function startQuiz() {
   to { transform: rotate(360deg); }
 }
 .heart-icon {
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
   color: var(--color-primary);
   animation: pulse 2s infinite ease-in-out;
   filter: drop-shadow(0 5px 10px rgba(255, 107, 129, 0.6));
@@ -135,11 +135,11 @@ function startQuiz() {
   
   /* 移动端适配 */
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   
   @media (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 .subtitle {
@@ -149,7 +149,7 @@ function startQuiz() {
   
   /* 移动端适配 */
   @media (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 .guide-text {
@@ -160,7 +160,7 @@ function startQuiz() {
   
   /* 移动端适配 */
   @media (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
   }
@@ -171,8 +171,8 @@ function startQuiz() {
   color: var(--color-primary);
   border: none;
   border-radius: 50px;
-  padding: 20px 45px;
-  font-size: 1.3rem;
+  padding: 22px 50px;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;

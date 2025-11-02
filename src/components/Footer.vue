@@ -18,21 +18,12 @@
         </p>
         
         <!-- 第3行：合规与联系方式 -->
-        <div class="compliance-contact">
-          <a 
-            href="https://beian.miit.gov.cn/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="beian"
-          >
-            赣ICP备2025075068号
-          </a>
-          
-          <span class="divider">|</span>
-          
-          <span class="contact">
-            举报邮箱: jubao@meta-mind.cn
-          </span>
+        <div class="footer-links">
+          <a href="/privacy" class="footer-link">隐私声明</a>
+          <span class="separator">|</span>
+          <a href="https://beian.miit.gov.cn/" target="_blank" class="footer-link">赣ICP备2025075068号</a>
+          <span class="separator">|</span>
+          <a href="mailto:jubao@meta-mind.cn" class="footer-link">联系我们</a>
         </div>
       </div>
     </div>
@@ -42,10 +33,13 @@
 <style scoped>
 .footer {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 20px 0;
   background: linear-gradient(135deg, var(--color-bg-start, #fde7f0), var(--color-bg-end, #e6e9ff));
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.03);
 }
 
 .container {
@@ -81,28 +75,25 @@
   margin: 0;
 }
 
-.compliance-contact {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-  opacity: 0.8;
+.footer-links {
+  margin-top: 15px;
 }
 
-.beian {
-  color: inherit;
+.footer-link {
+  color: var(--color-text-light);
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-size: 1.1rem;
+  transition: color 0.2s;
 }
 
-.beian:hover {
-  color: var(--color-primary, #ff6b81);
+.footer-link:hover {
+  color: var(--color-primary);
 }
 
-.divider {
-  user-select: none;
+.separator {
+  margin: 0 10px;
+  color: var(--color-text-light);
+  opacity: 0.6;
 }
 
 /* 移动端适配 */

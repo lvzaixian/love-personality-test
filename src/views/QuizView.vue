@@ -169,24 +169,18 @@ function calculateAndGoToResults() {
 }
 .question-text {
   font-size: 1.8rem; font-weight: 600; color: #3D3B56;
-  margin-bottom: 3rem; text-align: center; line-height: 1.6;
+  margin-bottom: 2rem; text-align: center; line-height: 1.4;
   
   /* 移动端适配 */
-  @media (max-width: 768px) {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-  }
-  
   @media (max-width: 480px) {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 .options-container {
   display: grid; grid-template-columns: 1fr; gap: 1.2rem;
 }
 .option-button {
-  width: 100%; padding: 1.2rem; font-size: 1.1rem; font-family: inherit;
+  width: 100%; padding: 1.2rem; font-size: 1.2rem; font-family: inherit;
   text-align: left; line-height: 1.6; background-color: #ffffff;
   color: #4A4A6A; border: 2px solid #e0ddee; border-radius: 16px;
   cursor: pointer; transition: all 0.3s ease;
