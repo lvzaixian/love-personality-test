@@ -43,7 +43,8 @@
 .footer {
   width: 100%;
   padding: 1.5rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, var(--color-bg-start, #fde7f0), var(--color-bg-end, #e6e9ff));
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: auto;
 }
 
