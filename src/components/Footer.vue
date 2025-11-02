@@ -14,16 +14,25 @@
         
         <!-- 第2行：版权声明 -->
         <p class="copyright">
-          © 2025 元认知星图 版权所有
+          © 2025 元认知星图团队 版权所有
         </p>
         
         <!-- 第3行：合规与联系方式 -->
-        <div class="footer-links">
-          <a href="/privacy" class="footer-link">隐私声明</a>
-          <span class="separator">|</span>
-          <a href="https://beian.miit.gov.cn/" target="_blank" class="footer-link">赣ICP备2025075068号</a>
-          <span class="separator">|</span>
-          <a href="mailto:jubao@meta-mind.cn" class="footer-link">联系我们</a>
+        <div class="compliance-contact">
+          <a 
+            href="https://beian.miit.gov.cn/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="beian"
+          >
+            赣ICP备2025075068号
+          </a>
+          
+          <span class="divider">|</span>
+          
+          <span class="contact">
+            举报邮箱: jubao@meta-mind.cn
+          </span>
         </div>
       </div>
     </div>
@@ -56,7 +65,7 @@
   justify-content: center;
   gap: 0.75rem;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   color: var(--color-text-light, #6a6882);
 }
 
@@ -64,7 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9375rem;
+  font-size: 1.1rem;
 }
 
 .emoji {
@@ -75,40 +84,35 @@
   margin: 0;
 }
 
-.footer-links {
-  margin-top: 15px;
-}
-
-.footer-link {
-  color: var(--color-text-light);
-  text-decoration: none;
+.compliance-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   font-size: 1.1rem;
-  transition: color 0.2s;
+  opacity: 0.8;
 }
 
-.footer-link:hover {
-  color: var(--color-primary);
+.beian {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.separator {
-  margin: 0 10px;
-  color: var(--color-text-light);
-  opacity: 0.6;
+.beian:hover {
+  color: var(--color-primary, #ff6b81);
+}
+
+.divider {
+  user-select: none;
+  margin: 0 8px;
 }
 
 /* 移动端适配 */
 @media (max-width: 480px) {
-  .footer {
-    padding: 1.25rem 0;
-  }
-  
   .footer-content {
-    gap: 0.5rem;
-    font-size: 0.8125rem;
-  }
-  
-  .privacy-statement {
-    font-size: 0.875rem;
+    font-size: 1.1rem;
   }
   
   .compliance-contact {
