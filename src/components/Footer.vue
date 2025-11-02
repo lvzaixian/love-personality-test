@@ -1,0 +1,131 @@
+<script setup>
+// Footer.vue - 页脚组件
+</script>
+
+<template>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- 第1行：隐私与信任声明 -->
+        <div class="privacy-statement">
+          <span class="emoji">🔒</span>
+          <span>您的数据仅存本地, 不会上传</span>
+        </div>
+        
+        <!-- 第2行：版权声明 -->
+        <p class="copyright">
+          © 2025 元认知星图 版权所有
+        </p>
+        
+        <!-- 第3行：合规与联系方式 -->
+        <div class="compliance-contact">
+          <a 
+            href="https://beian.miit.gov.cn/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="beian"
+          >
+            赣ICP备2025075068号
+          </a>
+          
+          <span class="divider">|</span>
+          
+          <span class="contact">
+            举报邮箱: jubao@meta-mind.cn
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<style scoped>
+.footer {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-light, #6a6882);
+}
+
+.privacy-statement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
+}
+
+.emoji {
+  margin-right: 0.5rem;
+}
+
+.copyright {
+  margin: 0;
+}
+
+.compliance-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.beian {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.beian:hover {
+  color: var(--color-primary, #ff6b81);
+}
+
+.divider {
+  user-select: none;
+}
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.25rem 0;
+  }
+  
+  .footer-content {
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+  }
+  
+  .privacy-statement {
+    font-size: 0.875rem;
+  }
+  
+  .compliance-contact {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .divider {
+    display: none;
+  }
+}
+</style>

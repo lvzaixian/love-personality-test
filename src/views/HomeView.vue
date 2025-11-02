@@ -31,11 +31,7 @@ function startQuiz() {
         <span>🚀 开始探索</span>
       </button>
     </main>
-    <footer class="footer">
-      <div class="divider"></div>
-      <p>你的心，藏着哪颗闪亮的星？</p>
-      <p class="brand">小红书 @ 元认知星图</p>
-    </footer>
+    <!-- 移除原有footer，由全局Footer组件替代 -->
   </div>
 </template>
 
@@ -59,6 +55,15 @@ function startQuiz() {
   background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
   overflow: hidden;
   position: relative;
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 10px;
+  }
 }
 
 .particle-canvas {
@@ -127,17 +132,38 @@ function startQuiz() {
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 }
 .subtitle {
   font-size: 1.2rem;
   color: var(--color-text-light);
   margin-top: 1rem;
+  
+  /* 移动端适配 */
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 }
 .guide-text {
   font-size: 1.1rem;
   color: var(--color-text-light);
   margin-top: 3rem;
   margin-bottom: 2rem;
+  
+  /* 移动端适配 */
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .start-button {

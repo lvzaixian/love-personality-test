@@ -129,6 +129,11 @@ function calculateAndGoToResults() {
 .quiz-header {
   width: 100%; max-width: 550px; position: fixed; top: 20px;
   left: 50%; transform: translateX(-50%); padding: 0 20px;
+  
+  /* 移动端适配 */
+  @media (max-width: 480px) {
+    top: 10px;
+  }
 }
 .progress-bar-container {
   width: 100%; height: 8px; background-color: rgba(0, 0, 0, 0.08);
@@ -151,10 +156,31 @@ function calculateAndGoToResults() {
   background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(25px);
   border-radius: 28px; border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
 }
 .question-text {
   font-size: 1.8rem; font-weight: 600; color: #3D3B56;
   margin-bottom: 3rem; text-align: center; line-height: 1.6;
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .options-container {
   display: grid; grid-template-columns: 1fr; gap: 1.2rem;

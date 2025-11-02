@@ -212,6 +212,7 @@ function colorWithAlpha(hex, alpha) {
         <p class="brand">小红书 ♥ 元认知星图</p>
       </footer>
     </div>
+    <!-- 移除原有footer，由全局Footer组件替代 -->
   </div>
 </template>
 
@@ -226,12 +227,31 @@ function colorWithAlpha(hex, alpha) {
   background: linear-gradient(160deg, var(--theme-secondary), #f4f6ff);
   display: flex; justify-content: center; align-items: flex-start;
   transition: background 0.5s ease;
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 10px;
+  }
 }
 .card {
   width: 100%; max-width: 550px; background-color: white;
   border-radius: 28px; padding: 3rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
   margin: 2rem 0; animation: fadeIn 0.8s ease-out;
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
@@ -250,6 +270,15 @@ function colorWithAlpha(hex, alpha) {
 .result-type { font-size: 1.3rem; color: #8c82a3; margin-bottom: 0.5rem; }
 .animal-name {
   font-size: 3.5rem; font-weight: 700; color: var(--theme-text); line-height: 1.2;
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
 }
 .animal-title { font-size: 1.4rem; color: #6a6882; margin-top: 0.8rem; }
 .result-section { margin-bottom: 3rem; }
@@ -304,7 +333,6 @@ function colorWithAlpha(hex, alpha) {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px color-mix(in srgb, var(--theme-primary) 40%, transparent);
 }
-.footer { text-align: center; margin-top: 2.5rem; }
-.footer .brand { font-weight: 600; color: #8c82a3; font-size: 1rem; }
+/* 移除原有footer样式，由全局Footer组件替代 */
 </style>
 
